@@ -1,3 +1,12 @@
 [submodule "submodules/mattpocock-skills"]
 	path = submodules/mattpocock-skills
 	url = https://github.com/emfrom/skills.git
+[submodule "submodules/addyosmani-agent-skills"]
+	path = submodules/addyosmani-agent-skills
+	url = https://github.com/emfrom/agent-skills.git
+[submodule "submodules/phuryn-pm-skills"]
+	path = submodules/phuryn-pm-skills
+	url = https://github.com/emfrom/pm-skills.git
+[submodule "submodules/openai-skills"]
+	path = submodules/openai-skills
+	url = https://github.com/emfrom/openai-skills.git

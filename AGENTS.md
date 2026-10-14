@@ -1,5 +1,14 @@
 # Repository instructions
 
+## Skill activation and deactivation
+
+When the user's intent is to activate or deactivate an upstream skill, change its GNU Stow link; keep the skill source in its submodule. Each upstream skill has an individual package under `stow/`, named `<source>-<skill>`.
+
+- Activate: `stow --dir=stow --target=. <package>`
+- Deactivate: `stow --dir=stow --target=. --delete <package>`
+
+Find the package under `stow/` if the name is unknown. Verify activation by checking that `agent/skills/<skill>/SKILL.md` resolves into the intended submodule. Deactivation removes only the Pi-facing link, not the package or submodule source. Local skills stored directly under `agent/skills/` are not Stow-managed.
+
 ## Secret and privacy review before commits
 
 Before committing any files, verify that the complete staged change is safe to publish:

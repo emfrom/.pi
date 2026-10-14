@@ -3,25 +3,29 @@
 !/.gitignore
 !/README.md
 !/AGENTS.md
+!/docs/
+!/docs/research/
+!/docs/research/popular-dev-project-skills.md
 !/agent/
 !/submodules/
 /submodules/*
 !/submodules/README.md
 !/submodules/mattpocock-skills
+!/submodules/addyosmani-agent-skills
+!/submodules/phuryn-pm-skills
+!/submodules/openai-skills
 !/stow/
 /stow/*
-!/stow/mattpocock-skills/
-!/stow/mattpocock-skills/agent/
-!/stow/mattpocock-skills/agent/skills/
-!/stow/mattpocock-skills/agent/skills/**
+!/stow/*/
 
-# Keep the reusable Pi skills and non-secret user settings.
+# Keep local skills and non-secret user settings. Stow-created upstream links stay local.
 /agent/*
 !/agent/settings.json
 !/agent/skills/
 /agent/skills/*
-!/agent/skills/**/
-!/agent/skills/**
+!/agent/skills/automate-spec/
+!/agent/skills/find-skills/
+!/agent/skills/implement-serial/
 
 # Local, credential-bearing, or machine-specific Pi state is never published.
 /agent/auth.json
