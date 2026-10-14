@@ -3,9 +3,6 @@
 !/.gitignore
 !/README.md
 !/AGENTS.md
-!/docs/
-!/docs/research/
-!/docs/research/popular-dev-project-skills.md
 !/agent/
 !/submodules/
 /submodules/*
