@@ -27,6 +27,7 @@
 !/agent/skills/automate-spec/
 !/agent/skills/find-skills/
 !/agent/skills/implement-serial/
+!/agent/skills/manage-pi-skills/
 
 # Local, credential-bearing, or machine-specific Pi state is never published.
 /agent/auth.json

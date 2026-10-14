@@ -1,30 +1,5 @@
 # .pi
 
-My personal [Pi](https://github.com/badlogic/pi-mono) configuration. Skills are managed with GNU Stow; upstream and personal skill repos are tracked as submodules.
+My personal [Pi](https://github.com/badlogic/pi-mono) configuration. Imported skill sources live in Git submodules; this repository also provides local skill-management help.
 
-To set it up, activate all distinct skills from the submodules:
-
-```sh
-git clone --recurse-submodules <repo-url> ~/.pi
-cd ~/.pi
-for dir in stow/*/; do
-  package=${dir#stow/}
-  stow --dir=stow --target=. "${package%/}"
-done
-```
-
-This activates all **176 distinct skills** by default (173 upstream skills and 3 personal skills). It is useful for discovery, but probably too much for daily workloads: Pi loads every active skill's name and description into its prompt. Deactivate skills you do not use with Stow, and activate them again when needed. All skills are sourced from submodules and managed by Stow. If you cloned without submodules, run `git submodule update --init --recursive` first.
-
-Three upstream entries duplicate skill names, which Pi cannot load twice: this setup uses Matt Pocock's `code-review` and `retro`, and OpenAI's curated `openai-docs`. The alternative versions remain in their submodules.
-
-For example:
-
-```sh
-# Activate
-stow --dir=stow --target=. mattpocock-code-review
-
-# Deactivate (removes only the Pi-facing link; keeps the submodule source)
-stow --dir=stow --target=. --delete mattpocock-code-review
-```
-
-Package names use `<source>-<skill>`, such as `phuryn-outcome-roadmap` or `openai-security-threat-model`. Replace the example package name with the skill you want to manage.
+For setup, an explanation of how the repository works, or help managing skills and their sources, invoke **`/manage-pi-skills`** in Pi. On a fresh clone, include the submodules (`git clone --recurse-submodules <repo-url> ~/.pi`), then use the skill to inspect and finish setup. It can activate or deactivate individual skills or a suitable skillset, switch a source between a fork and its upstream, and merge upstream changes into tracked forks.
