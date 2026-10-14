@@ -1,0 +1,9 @@
+# Submodule directory
+
+This folder contains the source repositories for imported skills. Each direct child named `<name>-skills` is a Git submodule; the parent repository records only its pinned commit (gitlink), while `.gitmodules` maps the local path to the remote URL. The names identify sources, not necessarily their GitHub repository slugs. Check `.gitmodules` and hosting metadata instead of deriving a URL from a directory name.
+
+Submodule membership changes over time; derive the current entries from `.gitmodules` and `git submodule status` rather than maintaining a copied inventory here. Repository layouts differ: inspect each source for its skill manifests (typically `SKILL.md`) and any repository-specific `AGENTS.md`; do not assume skills live at a common depth or flatten/copy their source files here.
+
+The parent-level `README.md` catalogs source repositories. Keep that catalog current when adding or renaming a source; this file documents structure rather than duplicating the inventory. Individual Pi-facing packages live in `../stow/`; they link to skill directories in these submodules so skills can be activated independently. When importing a repository, choose a non-colliding `<name>-skills` path that fits the source identity, add it as a submodule, inspect its skill layout and trust implications, and create packages that preserve its original structure. Do not activate every discovered skill unless requested.
+
+Treat each submodule as an independently versioned repository. Check its worktree and repository-specific instructions before changing it. Changes to a fork, its remotes, or its pinned commit are distinct operations; verify the destination and preserve fork-only work. A parent-repository commit updates the recorded gitlink, not the contents or history of the submodule.
