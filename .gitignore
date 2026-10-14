@@ -1,0 +1,56 @@
+# This repository is an allowlist: only explicitly reviewed configuration is tracked.
+/*
+!/.gitignore
+!/README.md
+!/AGENTS.md
+!/agent/
+!/submodules/
+/submodules/*
+!/submodules/README.md
+!/submodules/mattpocock-skills
+!/stow/
+/stow/*
+!/stow/mattpocock-skills/
+!/stow/mattpocock-skills/agent/
+!/stow/mattpocock-skills/agent/skills/
+!/stow/mattpocock-skills/agent/skills/**
+
+# Keep the reusable Pi skills and non-secret user settings.
+/agent/*
+!/agent/settings.json
+!/agent/skills/
+/agent/skills/*
+!/agent/skills/**/
+!/agent/skills/**
+
+# Local, credential-bearing, or machine-specific Pi state is never published.
+/agent/auth.json
+/agent/models.json
+/agent/models-store.json
+/agent/pi-local-connections.json
+/agent/trust.json
+/agent/memories/
+/agent/sessions/
+/agent/missions/
+/agent/npm/
+/agent/install/
+/agent/bin/
+/agent/extensions/
+/agent/agents/
+/agent/prompts/
+/agent/pi-subagents/
+/agent/cc-cli-logs/
+/agent/run-history.jsonl
+/agent/crashes.json
+/agent/*.log
+
+# Exclude the skill that embeds this machine's absolute paths.
+/agent/skills/list-directory/
+
+# Defense in depth for sensitive material accidentally added under skills.
+/agent/skills/**/.env*
+/agent/skills/**/*secret*
+/agent/skills/**/*credential*
+/agent/skills/**/*.pem
+/agent/skills/**/*.key
+/agent/skills/**/*token*
