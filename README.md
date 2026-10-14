@@ -1,6 +1,6 @@
 # .pi
 
-My personal [Pi](https://github.com/badlogic/pi-mono) configuration. Skills are managed with GNU Stow; upstream skill repos are tracked as submodules.
+My personal [Pi](https://github.com/badlogic/pi-mono) configuration. Skills are managed with GNU Stow; upstream and personal skill repos are tracked as submodules.
 
 To set it up, activate all distinct skills from the submodules:
 
@@ -13,7 +13,7 @@ for dir in stow/*/; do
 done
 ```
 
-This activates all **173 distinct submodule skills** by default. It is useful for discovery, but probably too much for daily workloads: Pi loads every active skill's name and description into its prompt. Deactivate skills you do not use with Stow, and activate them again when needed. Local skills live directly under `agent/skills/` and are not managed by Stow. If you cloned without submodules, run `git submodule update --init --recursive` first.
+This activates all **176 distinct skills** by default (173 upstream skills and 3 personal skills). It is useful for discovery, but probably too much for daily workloads: Pi loads every active skill's name and description into its prompt. Deactivate skills you do not use with Stow, and activate them again when needed. All skills are sourced from submodules and managed by Stow. If you cloned without submodules, run `git submodule update --init --recursive` first.
 
 Three upstream entries duplicate skill names, which Pi cannot load twice: this setup uses Matt Pocock's `code-review` and `retro`, and OpenAI's curated `openai-docs`. The alternative versions remain in their submodules.
 

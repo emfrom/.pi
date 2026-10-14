@@ -11,9 +11,10 @@
 /submodules/*
 !/submodules/README.md
 !/submodules/mattpocock-skills
-!/submodules/addyosmani-agent-skills
-!/submodules/phuryn-pm-skills
+!/submodules/addyosmani-skills
+!/submodules/phuryn-skills
 !/submodules/openai-skills
+!/submodules/emfrom-skills
 !/stow/
 /stow/*
 !/stow/*/
