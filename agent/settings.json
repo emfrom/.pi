@@ -4,17 +4,18 @@
   "defaultProvider": "openai-codex",
   "defaultModel": "gpt-6-luna",
   "enabledModels": [
-    "ollama/qwen3:4b",
     "lumo-tamer/lumo-lite",
     "openai-codex/gpt-6-astra",
     "openai-codex/gpt-6-luna",
     "openai-codex/gpt-6-sol",
-    "openai/gpt-6-luna"
+    "openai/gpt-6-luna",
+    "polystrata/gemma-4-26b-a4b-ud-q2_k_xl"
   ],
   "packages": [
-    "npm:pi-subagents"
+    "npm:pi-subagents",
+    "npm:pi-playwright"
   ],
-  "hideThinkingBlock": true,
+  "hideThinkingBlock": false,
   "compaction": {
     "modelOverrides": {
       "openai-codex/gpt-6-sol": {
